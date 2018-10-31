@@ -12,10 +12,11 @@ RUN find /etc/systemd/system \
     -exec rm \{} \;
 
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -y --no-install-recommends \
     dbus sudo python-software-properties && \
     apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
+    rm -rf /usr/share/doc && \
+    rm -rf /usr/share/man
 
 RUN systemctl set-default multi-user.target
 
