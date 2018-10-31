@@ -13,7 +13,7 @@ RUN find /etc/systemd/system \
 
 RUN apt-get update && \
     apt-get install -y \
-    dbus && \
+    dbus sudo python-software-properties && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
