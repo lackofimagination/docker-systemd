@@ -1,4 +1,6 @@
-# solita/ubuntu-systemd
+# lackofimagination/ubuntu-systemd
+
+[![Build Status](https://travis-ci.org/lackofimagination/docker-systemd.svg?branch=master)](https://travis-ci.org/lackofimagination/docker-systemd)
 
 A Docker image based on `ubuntu` that runs `systemd` with a minimal set of
 services.
