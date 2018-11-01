@@ -8,4 +8,4 @@ before_install:
 script:
   - docker build -t local-systemd .
   - docker run -d --name systemd --security-opt seccomp=unconfined --tmpfs /run --tmpfs /run/lock -v /sys/fs/cgroup:/sys/fs/cgroup:ro -t local-systemd
-  - docker exec systemd journalctl -f
+  - docker exec systemd journalctl
